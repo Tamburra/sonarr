@@ -28,12 +28,11 @@ RUN \
   pip install qtfaststart && \
   git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git /sickbeard_mp4_automator/ && \
   touch /sickbeard_mp4_automator/info.log && \
-  chmod a+rwx -R /sickbeard_mp4_automator && \
-  ln -s /downloads /data && \
+  chown -R abc:abc /sickbeard_mp4_automator && \
   ln -s /config_mp4_automator/autoProcess.ini /sickbeard_mp4_automator/autoProcess.ini && \
   rm -rf \
-	/tmp/* \
-	/var/lib/apt/lists/* \
-	/var/tmp/*
+    /tmp/* \
+    /var/lib/apt/lists/* \
+    /var/tmp/*
 
 VOLUME /config_mp4_automator
