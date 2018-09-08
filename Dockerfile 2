@@ -1,0 +1,1 @@
+RUN chown -R abc:abc /sickbeard_mp4_automator
